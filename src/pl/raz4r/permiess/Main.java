@@ -7,7 +7,6 @@ import pl.raz4r.permiess.listeners.PlayerJoin;
 
 public class Main extends JavaPlugin {
 	
-	public static FileConfiguration getConfig;
 	public static Main getPlugin;
 	
 	@Override
@@ -15,12 +14,10 @@ public class Main extends JavaPlugin {
 	{
 		System.out.println("[PERMIESS] Uruchamianie pluginu");
 		System.out.println("[PERMIESS] Wczytywanie configu");
-		getConfig=this.getConfig();
 		System.out.println("[PERMIESS] Config wczytany");
 		System.out.println("[PERMIESS] Uruchamianie wtyczek");
 		getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
 		getPlugin=this;
-		getConfig=this.getConfig();
 	}
 	@Override
 	public void onDisable()

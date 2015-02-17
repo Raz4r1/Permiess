@@ -1,5 +1,7 @@
 package pl.raz4r.permiess.listeners;
 
-public class PlayerJoin {
+import org.bukkit.event.Listener;
+
+public class PlayerJoin implements Listener {
 
 }
