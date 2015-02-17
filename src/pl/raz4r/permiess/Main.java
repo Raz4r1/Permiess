@@ -11,13 +11,16 @@ public class Main extends JavaPlugin {
 	@Override
 	public void onEnable()
 	{
+		System.out.println("[PERMIESS] Uruchamianie pluginu");
+		System.out.println("[PERMIESS] Wczytywanie configu");
 		getPlugin=this;
 		getConfig=this.getConfig();
 	}
 	@Override
 	public void onDisable()
 	{
-		
+		System.out.println("[PERMIESS] Wylaczanie pluginu");
+		System.out.println("[PERMIESS] Zapisywanie configu");
 	}
 
 }
