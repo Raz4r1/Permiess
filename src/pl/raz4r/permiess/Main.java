@@ -15,6 +15,7 @@ public class Main extends JavaPlugin {
 	@Override
 	public void onEnable()
 	{
+		getPlugin=this;
 		System.out.println("[PERMIESS] Uruchamianie pluginu");
 		System.out.println("[PERMIESS] Wczytywanie configu");
 		Config.registerConfig("Perm", "Permissions.yml", this);
@@ -26,7 +27,7 @@ public class Main extends JavaPlugin {
 		Config.getConfig("Perm").addDefault("Gracz.ChatPrefix", "[Gracz]");
 		Config.getConfig("Config").addDefault("General.FormatWiadomosci", "<<%GRUPA% %NICK%>>");
 		Config.getConfig("Config").addDefault("General.FirstWiadomoscPowitalna", "Witamy nowego gracza na serwerze!");
-		
+		Config.saveAll();
 		System.out.println("[PERMIESS] Config wczytany");
 		System.out.println("[PERMIESS] Uruchamianie wtyczek");
 		getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
@@ -34,7 +35,6 @@ public class Main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new BlockPlace(), this);
 		getServer().getPluginManager().registerEvents(new PlayerDeath(), this);
 		getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
-		getPlugin=this;
 	}
 	@Override
 	public void onDisable()
