@@ -8,7 +8,7 @@ public class DataPerm {
 	{
 		return Config.getConfig("Perm").getString("Players." + p +".Grupa");
 	}
-	public static String getGroupChatPrefi(String g)
+	public static String getGroupChatPrefix(String g)
 	{
 		return Config.getConfig("Perm").getString(g+".ChatPrefix");
 	}

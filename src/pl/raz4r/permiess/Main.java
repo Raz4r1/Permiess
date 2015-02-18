@@ -19,6 +19,14 @@ public class Main extends JavaPlugin {
 		System.out.println("[PERMIESS] Wczytywanie configu");
 		Config.registerConfig("Perm", "Permissions.yml", this);
 		Config.registerConfig("Config", "Config.yml", this);
+		Config.getConfig("Perm").options().copyDefaults(true);
+		Config.getConfig("Config").options().copyDefaults(true);
+		Config.getConfig("Perm").addDefault("DomyslnaGrupa", "Gracz");
+		Config.getConfig("Perm").addDefault("Gracz.WiadomoscPowitalna", "Witamy na serwerze!");
+		Config.getConfig("Perm").addDefault("Gracz.ChatPrefix", "[Gracz]");
+		Config.getConfig("Config").addDefault("General.FormatWiadomosci", "<<%GRUPA% %NICK%>>");
+		Config.getConfig("Config").addDefault("General.FirstWiadomoscPowitalna", "Witamy nowego gracza na serwerze!");
+		
 		System.out.println("[PERMIESS] Config wczytany");
 		System.out.println("[PERMIESS] Uruchamianie wtyczek");
 		getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
