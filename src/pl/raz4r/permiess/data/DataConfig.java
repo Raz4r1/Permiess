@@ -15,9 +15,11 @@ public class DataConfig {
 	public static void setWiadomoscPowitalna(String w)
 	{
 		Config.getConfig("Config").set("General.WiadomoscPowitalna", w);
+		Config.save("Config");
 	}
 	public static void setPierwszaWiadomoscPowitalna(String w)
 	{
 		Config.getConfig("Config").set("Gerneral.FirstWiadomoscPowitalna",w);
+		Config.save("Config");
 	}
 }

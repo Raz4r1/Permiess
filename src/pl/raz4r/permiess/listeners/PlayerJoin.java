@@ -5,6 +5,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import pl.raz4r.permiess.Config;
+import pl.raz4r.permiess.data.DataPerm;
 
 public class PlayerJoin implements Listener {
 
@@ -14,8 +15,10 @@ public class PlayerJoin implements Listener {
 		{
 			
 		}
-		else{
-			
+	     if(!Config.getConfig("Perm").contains("Players." + e.getPlayer().getName()));
+		{
+			DataPerm.setGroupPlayer(e.getPlayer().getName(), DataPerm.getDefaultGroup());
 		}
+	
 	}
 }

@@ -19,13 +19,16 @@ public class DataPerm {
 	public static void setGroupPlayer(String p,String g)
 	{
 		Config.getConfig("Perm").set("Players." + p + ".Grupa", g);
+		Config.save("Perm");
 	}
     public static void setGroupChatPrefix(String g,String prefix)
     {
     	Config.getConfig("Perm").set(g+".ChatPrefix",prefix);
+    	Config.save("Perm");
     }
     public static void setDefaultGroup(String g)
     {
     	Config.getConfig("Perm").set("DomyslnaGrupa", g);
+    	Config.save("Perm");
     }
 }
