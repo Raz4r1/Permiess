@@ -16,6 +16,10 @@ public class DataPerm {
 	{
 		return Config.getConfig("Perm").getString("DomyslnaGrupa");
 	}
+	public static String getWiadomoscGrupy(String g)
+	{
+		return Config.getConfig("Perm").getString(g + ".WiadomoscPowitalna");
+	}
 	public static void setGroupPlayer(String p,String g)
 	{
 		Config.getConfig("Perm").set("Players." + p + ".Grupa", g);
@@ -29,6 +33,11 @@ public class DataPerm {
     public static void setDefaultGroup(String g)
     {
     	Config.getConfig("Perm").set("DomyslnaGrupa", g);
+    	Config.save("Perm");
+    }
+    public static void setWiadomoscGrupy(String g, String w)
+    {
+    	Config.getConfig("Perm").set(g + ".WiadomoscPowitalna", w);
     	Config.save("Perm");
     }
 }
