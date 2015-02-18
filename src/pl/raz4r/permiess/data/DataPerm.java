@@ -12,6 +12,10 @@ public class DataPerm {
 	{
 		return Config.getConfig("Perm").getString(g+".ChatPrefix");
 	}
+	public static String getDefaultGroup()
+	{
+		return Config.getConfig("Perm").getString("DomyslnaGrupa");
+	}
 	public static void setGroupPlayer(String p,String g)
 	{
 		Config.getConfig("Perm").set("Players." + p + ".Grupa", g);
@@ -19,5 +23,9 @@ public class DataPerm {
     public static void setGroupChatPrefix(String g,String prefix)
     {
     	Config.getConfig("Perm").set(g+".ChatPrefix",prefix);
+    }
+    public static void setDefaultGroup(String g)
+    {
+    	Config.getConfig("Perm").set("DomyslnaGrupa", g);
     }
 }

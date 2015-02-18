@@ -1,0 +1,5 @@
+name: Permiess
+main: pl.raz4r.permiess.Main
+version: 1.0
+ 
+commands:
