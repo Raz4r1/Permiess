@@ -2,7 +2,11 @@ package pl.raz4r.permiess;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import pl.raz4r.permiess.listeners.AsyncPlayerChat;
+import pl.raz4r.permiess.listeners.BlockPlace;
+import pl.raz4r.permiess.listeners.PlayerDeath;
 import pl.raz4r.permiess.listeners.PlayerJoin;
+import pl.raz4r.permiess.listeners.PlayerQuit;
 
 public class Main extends JavaPlugin {
 	
@@ -18,6 +22,10 @@ public class Main extends JavaPlugin {
 		System.out.println("[PERMIESS] Config wczytany");
 		System.out.println("[PERMIESS] Uruchamianie wtyczek");
 		getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
+		getServer().getPluginManager().registerEvents(new AsyncPlayerChat(), this);
+		getServer().getPluginManager().registerEvents(new BlockPlace(), this);
+		getServer().getPluginManager().registerEvents(new PlayerDeath(), this);
+		getServer().getPluginManager().registerEvents(new PlayerQuit(), this);
 		getPlugin=this;
 	}
 	@Override
